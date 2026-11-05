@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conjuntos-disjuntos-python"
+version = "1.0.0"
+description = "Union-Find (conjuntos disjuntos) com união por tamanho/rank e compressão de caminho, Kruskal e contagem de ilhas em Python puro."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "sidsidoso" }]
+keywords = ["union-find", "conjuntos-disjuntos", "kruskal", "estrutura-de-dados"]
+
+[project.urls]
+Repository = "https://github.com/sidsidoso/conjuntos-disjuntos-python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
